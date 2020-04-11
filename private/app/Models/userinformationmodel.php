@@ -1,7 +1,7 @@
 <?php
-classUserInformationModel extends Model {
-    function_construct(){
-        parent::_construct();
+class UserInformationModel extends Model {
+    function __construct() {
+        parent::__construct();
     }
     function validateUser($username,$password){
         $cln_username=$username;
@@ -9,7 +9,7 @@ classUserInformationModel extends Model {
         $sql = "SELECT `hash_password`, `first_name`, `last_name` from authors where email = ?";
         $statement = $this->db->prepare($sql);
         $count = $statement->execute(Array($cln_username));
-        $row = $satement->fetch();
+        $row = $statement->fetch();
         $hash_password = $row[0];
         $is_validate = false;
         if(isset($hash_password)){
