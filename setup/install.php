@@ -21,7 +21,7 @@ class Installer{
                     $dsn
                     , $this->config["database"]["username"]
                     , $this->config["database"]["password"]
-                );"
+                );
                 $sql = file_get_cotents("setup/data/init.sql");
                 
                 $this->db->exec($sql);
