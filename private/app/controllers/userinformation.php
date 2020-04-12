@@ -1,10 +1,10 @@
 <?php
 
-class User extends Controller {
+class UserInformation extends Controller {
 
-    function _construct() {
-        parent::_construct ();
-
+    function __construct() {
+        echo("dsfsd");
+        parent::__construct();
     }
     function Index() {
         $this->view("template/header");
