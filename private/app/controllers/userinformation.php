@@ -45,7 +45,7 @@ class User extends Controller {
             $csrf = random_int(10000, 1000000000);
             $_SESSION["csrf"] = $csrf;
             setcookie("csrf",$csrf);
-            $this->view("test/login" , array("csrf" => $csrf));
+            $this->view("main/login" , array("csrf" => $csrf));
         }else{
 http_response_code(405);
 
