@@ -1,6 +1,6 @@
-USE MyDB;
+USE database;
 
-CREATE TABLE AUTHORS (
+CREATE TABLE authors (
     email VARCHAR(128) NOT NULL PRIMARY KEY,
     hash_password VARCHAR(255) NOT NULL,
     first_name VARCHAR(30) NOT NULL,

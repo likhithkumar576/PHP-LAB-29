@@ -70,14 +70,16 @@ abstract class Controller {
         $class = $class[count($class)-1];
 
         $path = strtolower($path);
-
+        
         require(ROOT . "/private/app/models/$path.php");
 
         $this->$class = new $class;
     }
 
     function view ($path, $data = []) {
-
+        if(is_array($data))
+        extract($data);
+        //echo($path);
         require(ROOT . "/private/app/views/$path.php");
 
     }
