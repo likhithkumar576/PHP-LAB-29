@@ -34,7 +34,7 @@ class UserInformation extends Controller {
                 $validate = $this->UsersInformationModel->validateUser($clean_username,$clean_password);
                 if($validate){
 
-                    header("location: /user/");
+                    header("location: /userinformation/");
                 }else{
                     echo("invalidate");
                 }
@@ -56,7 +56,7 @@ http_response_code(405);
        session_unset();
        session_destroy();
        $_SESSION = Array();
-       header("location: /user/");
+       header("location: /userinformation/");
    }
 
 
