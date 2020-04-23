@@ -21,4 +21,4 @@ CREATE TABLE posts(
     FOREIGN KEY (author)
     REFERENCES authors (email)
 );
-INSERT INTO 'posts' (slug,title,content,author) VALUES("post-a","Post A","<articl><h2Post A<h2><section><p>This is a sample article</p></section></article>","likhithlikki08@gmail.com");
+INSERT INTO `posts` (`slug`,`title`,`content`,`author`) VALUES("post-a","Post A","<article><h2Post A<h2><section><p>This is a sample article</p></section></article>","likhthlikki08@gmail.com");

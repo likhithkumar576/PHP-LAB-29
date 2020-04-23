@@ -23,7 +23,8 @@ class Blog extends Controller
     }
     function Create(){
         $is_auth = isset($_SESSION["username"]);
-        if(!is_auth){
+        if(!$is_auth){
+            echo("is_auth::" . $is_auth);
             header("loaction: /blog");
             
             return;
