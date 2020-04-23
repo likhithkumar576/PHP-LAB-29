@@ -15,10 +15,10 @@ CREATE TABLE posts(
     slug VARCHAR(128) NOT NULL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     content TEXT,
-    author VARCHAR(128) NOT NULL
+    author VARCHAR(128) NOT NULL,
     post_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    INDEX(author),
-    FOREIGN KEY(author)
-    REFERENCES users (email)
+    INDEX (author),
+    FOREIGN KEY (author)
+    REFERENCES authors (email)
 );
 INSERT INTO 'posts' (slug,title,content,author) VALUES("post-a","Post A","<articl><h2Post A<h2><section><p>This is a sample article</p></section></article>","likhithlikki08@gmail.com");
