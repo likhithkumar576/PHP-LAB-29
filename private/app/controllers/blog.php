@@ -19,7 +19,7 @@ class Blog extends Controller
         //echo("postID" . $postId);
         $this -> model("BlogModel");
         $post = $this -> BlogModel -> getPostById($postId);
-        $this -> view ("template/header" , $post);
+        $this -> view ("blog/header" , $post);
         $this -> view ("blog/post" , $post);
         $this -> view("template/footer");
     }
@@ -54,9 +54,9 @@ function UpdateBlogPost($postId){
         $slug = $_POST["slug"];
         $title = $_POST["title"];
         $content = $_POST["content"];
-        $author = $_SESSION["author"];
+        $author = $_POST["author"];
         $this->model("BlogModel");
-        echo("slug" . $slug ."<br />"."title". $title ."<br />". "content".$content. "<br />"."author". $author."<br />");
+        //echo("slug" . $slug ."<br />"."title". $title ."<br />". "content".$content. "<br />"."author". $author."<br />");
         $slug = $this->BlogModel->UpdateBlogPost($slug,$title,$author,$content);
         header("location: /blog/read/" . $slug);
     }else{
