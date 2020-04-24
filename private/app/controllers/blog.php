@@ -56,7 +56,6 @@ function UpdateBlogPost($postId){
         $content = $_POST["content"];
         $author = $_POST["author"];
         $this->model("BlogModel");
-        //echo("slug" . $slug ."<br />"."title". $title ."<br />". "content".$content. "<br />"."author". $author."<br />");
         $slug = $this->BlogModel->UpdateModelBlogPost($slug,$title,$author,$content);
         header("location: /blog/read/" . $slug);
     }else{
