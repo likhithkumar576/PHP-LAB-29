@@ -8,7 +8,7 @@ class BlogModel extends Model{
         $stmt = $this -> db -> prepare($sql);
         $stmt -> execute();
         return $stmt -> fetchAll();
-    }function getPostByIUd($postID){
+    }function getPostById($postID){
         $sql = "SELECT `title`,`content`,`author`,`post_date`, `slug` FROM posts WHERE slug = ?";
         $stmt = $this ->db-> prepare($sql);
         $stmt -> execute(Array($postID));
