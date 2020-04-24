@@ -10,7 +10,7 @@ CREATE TABLE authors (
     last_login_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO authors (email, hash_password, first_name, last_name, biography) VALUES ("likhthlikki08@gmail.com", "$2y$10$YR7/pHUdX.lJA/qsHNWuEOGn7PbjkBw8iiVxZKs/9CFeKSFHSO6PK", "likhith", "kumar", "student");
+INSERT INTO authors (email, hash_password, first_name, last_name, biography) VALUES ("likhithlikki08@gmail.com", "$2y$10$YR7/pHUdX.lJA/qsHNWuEOGn7PbjkBw8iiVxZKs/9CFeKSFHSO6PK", "likhith", "kumar", "student");
 CREATE TABLE posts(
     slug VARCHAR(128) NOT NULL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -21,4 +21,8 @@ CREATE TABLE posts(
     FOREIGN KEY (author)
     REFERENCES authors (email)
 );
-INSERT INTO `posts` (`slug`,`title`,`content`,`author`) VALUES("post-a","Post A","<article><h2Post A<h2><section><p>This is a sample article</p></section></article>","likhthlikki08@gmail.com");
+INSERT INTO `posts` (`slug`,`title`,`content`,`author`) VALUES("post-a","Post A","<article><h2Post A<h2><section><p>This is a sample article</p></section></article>","likhithlikki08@gmail.com");
+
+INSERT INTO `posts` (`slug`,`title`,`content`,`author`) VALUES("mypost-1","Post 1","<article><h2Post 1<h2><section><p>This is a sample article of post1</p></section></article>","likhithlikki08@gmail.com");
+
+INSERT INTO `posts` (`slug`,`title`,`content`,`author`) VALUES("mypost-2","Post 2","<article><h2Post 2<h2><section><p>This is a sample article of post2</p></section></article>","likhithlikki08@gmail.com");
