@@ -26,3 +26,7 @@ INSERT INTO `posts` (`slug`,`title`,`content`,`author`) VALUES("post-a","Post A"
 INSERT INTO `posts` (`slug`,`title`,`content`,`author`) VALUES("mypost-1","Post 1","<article><h2Post 1<h2><section><p>This is a sample article of post1</p></section></article>","likhithlikki08@gmail.com");
 
 INSERT INTO `posts` (`slug`,`title`,`content`,`author`) VALUES("mypost-2","Post 2","<article><h2Post 2<h2><section><p>This is a sample article of post2</p></section></article>","likhithlikki08@gmail.com");
+
+INSERT INTO `posts` (`slug`,`title`,`content`,`author`) VALUES("mypost-3","Post 3","<article><h2Post 3<h2><section><p>This is a sample article of post3</p></section></article>","likhithlikki08@gmail.com");
+
+INSERT INTO `posts` (`slug`,`title`,`content`,`author`) VALUES("mypost-4","Post 4","<article><h2Post 4<h2><section><p>This is a sample article of post4</p></section></article>","likhithlikki08@gmail.com");
