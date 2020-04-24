@@ -1,3 +1,9 @@
+<?php
+<a href="/blog/update/<?php echo($slug); ?>" />Update </a>
+<br/>
+<a href="/blog/" />View All posts </a>
+<?php
+?>
 <main>
 <?php echo($content); ?>
 </main>
