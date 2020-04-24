@@ -20,7 +20,7 @@ class BlogModel extends Model{
         $stmt-> execute(Array($slug,$title,$content,$author));
         return $slug;
     }
-    function UpdateBlogPost($slug,$title,$author,$content){
+    function UpdateModelBlogPost($slug,$title,$author,$content){
         //echo("slug" . $slug ."<br />"."title". $title ."<br />". "content".$content. "<br />"."author". $author."<br />");
         $update_sql = "UPDATE `posts` `set` `title` = ?, `content` = ?, `author` = ? where `slug` = ?";
         $update_stmt = $this->db->prepare($update_sql);
